@@ -25,13 +25,9 @@ jobs:
       - name: Install and build
         run: esy
 
-      - name: Copy built PPX file
-        run: |
-          mv ./_build/install/default/bin/esy esy
-
       - name: (only on release) Upload artifacts ${{ matrix.os }}
         uses: actions/upload-artifact@master
         with:
           name: ${{ matrix.os }}
-          path: esy
+          path: ./_build/install/default/bin/esy
           if-no-files-found: error
