@@ -29,5 +29,5 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: ${{ matrix.os }}
-          path: ./_build/install/default/bin
+          path: ./_build
           if-no-files-found: error
