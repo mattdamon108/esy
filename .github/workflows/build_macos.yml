@@ -1,4 +1,4 @@
-name: ppx_spice build macOS
+name: build macOS
 
 on: [workflow_dispatch]
 
